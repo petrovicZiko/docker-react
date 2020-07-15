@@ -14,4 +14,6 @@ RUN npm run build
 # /app/build <-- tu ce biti u kontejneru build fajlovi
 FROM nginx
 
+EXPOSE 80
+
 COPY --from=builder /app/build /usr/share/nginx/html
